@@ -1,0 +1,3 @@
+SELECT phone_full FROM public."contacts" 
+where firstname = {{customer_first_name.text}}
+and lastname = {{customer_last_nam.text}};

@@ -1,0 +1,4 @@
+SELECT * FROM public."call_records" WHERE number = {{this.params.phone_number}}
+AND call_date >= {{this.params.start_date}}
+and call_date<={{this.params.end_date}}
+order by call_date desc
