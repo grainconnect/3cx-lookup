@@ -9,7 +9,8 @@
     "leftColumn": 25,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "defaultDate"}
     ],
     "isDisabled": false,
     "isRequired": false,
@@ -27,6 +28,7 @@
     "mobileBottomRow": 20,
     "widgetName": "end_date",
     "minDate": "1920-12-31T18:30:00.000Z",
+    "dynamicPropertyPathList": [{"key": "defaultDate"}],
     "displayName": "DatePicker",
     "searchTags": ["calendar"],
     "bottomRow": 19,
@@ -39,7 +41,7 @@
     "labelPosition": "Top",
     "key": "9f68vb2f45",
     "labelTextSize": "0.875rem",
-    "defaultDate": "2024-06-26T11:49:01.942Z",
+    "defaultDate": "{{Date()}}",
     "isDeprecated": false,
     "rightColumn": 36,
     "widgetId": "xwf4mykk7w",
