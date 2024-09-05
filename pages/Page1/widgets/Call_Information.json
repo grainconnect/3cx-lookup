@@ -60,7 +60,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1721129762891,
+    "columnUpdatedAt": 1724254090468,
     "originalBottomRow": 84,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 35,
@@ -80,6 +80,8 @@
     "columnWidthMap": {
         "number": 423,
         "fileName": 731,
+        "filename": 770.0000000000001,
+        "id": 175,
         "url": 1156
     },
     "parentRowSpace": 10,
@@ -212,7 +214,7 @@
             "allowCellWrapping": false,
             "index": 1,
             "isDiscardVisible": true,
-            "isVisible": false,
+            "isVisible": true,
             "label": "filename",
             "fontStyle": "",
             "textColor": "",

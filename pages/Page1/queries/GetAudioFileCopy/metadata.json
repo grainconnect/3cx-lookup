@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "amazons3-plugin",
   "unpublishedAction": {
-    "name": "GetPhoneCalls",
+    "name": "GetAudioFileCopy",
     "datasource": {
       "name": "Amazon S3",
       "pluginId": "amazons3-plugin",
@@ -27,7 +27,7 @@
           "data": "3cx-audio-gdpr"
         },
         "command": {
-          "data": "LIST"
+          "data": "READ_FILE"
         },
         "create": {
           "dataType": {
@@ -39,14 +39,16 @@
         },
         "list": {
           "prefix": {
-            "data": "{{call_centre_id.text}}/"
+            "data": "{{call_centre_id.selectedOptionValue}}/"
           },
           "where": {
             "data": {
               "condition": "AND",
               "children": [
                 {
-                  "condition": "EQ"
+                  "condition": "EQ",
+                  "key": "",
+                  "value": "[]"
                 }
               ]
             }
@@ -70,7 +72,7 @@
           }
         },
         "path": {
-          "data": ""
+          "data": "2002/[Prudham, Carl]_2002-_20231108094134(18483).wav"
         },
         "read": {
           "dataType": {
@@ -94,15 +96,15 @@
     ],
     "messages": [],
     "jsonPathKeys": [
-      "call_centre_id.text"
+      "call_centre_id.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-05-29T10:41:13Z"
+    "createdAt": "2024-08-21T15:06:37Z"
   },
-  "id": "Page1_GetPhoneCalls",
+  "id": "Page1_GetAudioFileCopy",
   "deleted": false,
-  "gitSyncId": "6620f99a5778c8315d0c9012_665706495778c8315d0c9e41"
+  "gitSyncId": "66a797fc5778c8315d0cbc2e_66c6027d5778c8315d0cc593"
 }
