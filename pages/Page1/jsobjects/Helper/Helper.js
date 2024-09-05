@@ -44,10 +44,14 @@ export default {
 		//download("data:audio/wav;base64,"+GetAudioFile.data.fileData, file.filename, 'wav')
 	},
 	removePluses(rawString){
-
-		
-		rawString = "1029/[07901090664%3AMAIN NUMBER%3AOther+Calls+(16%2F11%2F2023)]_+447901090664-1029_20240724080634(45146).wav"
-		const newString = rawString.replace(/([+](?!44))/g," ")	
-		return newString
+		const firstBracket = rawString.indexOf("[")
+		const secondBracket = rawString.indexOf("]")
+		const editString = rawString.slice(firstBracket, secondBracket+1)
+		const newString = editString.replace(/([+](?!44))/g," ")	
+		const finalString = rawString.replace(editString, newString)
+		return finalString
 	}
-}
+}																						
+		// const newString = rawString.replace(/([+](?!44))/g," ")	
+		// return newString
+
