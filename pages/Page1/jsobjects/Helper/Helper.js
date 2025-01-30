@@ -16,6 +16,15 @@ export default {
 			"end_date":date_end
 		})
 	},
+	async getAnonymousCalls(){
+		let date_init = moment(start_date.formattedDate).startOf('day').toISOString()
+		let date_end = moment(end_date.formattedDate).endOf('day').toISOString()
+		await getCallList.run({
+			"phone_number": "anonymous",
+			"start_date":date_init,
+			"end_date":date_end
+		})
+	},
 	async downloadFile(){
 		var zip = JSZip()
 
@@ -25,7 +34,7 @@ export default {
 
 		for(const file of Call_Information.selectedRows){
 			let filename = Helper.removePluses(file.filename)
-			
+
 			console.log("downloading " + filename)
 			await GetAudioFile.run({"filename" : filename})
 			console.log("downloaded " + filename)
@@ -43,15 +52,15 @@ export default {
 
 		//download("data:audio/wav;base64,"+GetAudioFile.data.fileData, file.filename, 'wav')
 	},
-	removePluses(rawString){
-		const firstBracket = rawString.indexOf("[")
-		const secondBracket = rawString.indexOf("]")
-		const editString = rawString.slice(firstBracket, secondBracket+1)
-		const newString = editString.replace(/([+](?!44))/g," ")	
-		const finalString = rawString.replace(editString, newString)
-		return finalString
-	}
+		removePluses(rawString){
+			const firstBracket = rawString.indexOf("[")
+			const secondBracket = rawString.indexOf("]")
+			const editString = rawString.slice(firstBracket, secondBracket+1)
+			const newString = editString.replace(/([+](?!44))/g," ")	
+			const finalString = rawString.replace(editString, newString)
+			return finalString
+		}
 }																						
-		// const newString = rawString.replace(/([+](?!44))/g," ")	
-		// return newString
+// const newString = rawString.replace(/([+](?!44))/g," ")	
+// return newString
 

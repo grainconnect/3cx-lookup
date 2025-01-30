@@ -6,7 +6,7 @@
     "labelWidth": 5,
     "type": "DATE_PICKER_WIDGET2",
     "animateLoading": true,
-    "leftColumn": 13,
+    "leftColumn": 11,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"}
@@ -42,7 +42,7 @@
     "labelTextSize": "0.875rem",
     "defaultDate": "2020-01-01T12:49:02.022+00:00",
     "isDeprecated": false,
-    "rightColumn": 24,
+    "rightColumn": 22,
     "widgetId": "sk6qfgr4m5",
     "minWidth": 450,
     "label": "Date Range Start",
